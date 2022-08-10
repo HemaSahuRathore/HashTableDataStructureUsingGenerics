@@ -25,11 +25,11 @@ namespace HashTableNBinaryTree
         }
 
         //Method to find the frequency
-        public static void CountNumOfOccurence(string paragraph)
+        public static void CountNumOfOccurence(string phrase)
         {
             MyMapNode<string, int> hashTable = new MyMapNode<string, int>(6);
 
-            string[] words = paragraph.Split(' ');
+            string[] words = phrase.Split(' ');
 
             foreach (string word in words)
             {
@@ -38,7 +38,7 @@ namespace HashTableNBinaryTree
                 else
                     hashTable.Add(word.ToLower(), 1);
             }
-            Console.WriteLine("Frequencies of word in given paragraph : ");
+            Console.WriteLine("Frequency of words in given phrase : ");
             hashTable.Display();
         }
 
@@ -105,7 +105,7 @@ namespace HashTableNBinaryTree
                 if (item.Key.Equals(key))
                 {
                     itemFound = true;
-                    foundItem = item; //storing item to remove it using built method
+                    foundItem = item; //storing item to remove it using in-built method
                 }
             }
             if (itemFound)
@@ -149,7 +149,7 @@ namespace HashTableNBinaryTree
                     {
                         string res = element.ToString();
                         if (res != null)
-                            Console.WriteLine("Word : " + element.Key + ", Frequency :  " + element.Value);
+                            Console.WriteLine(element.Key + " -  " + element.Value);
                     }
             }
 

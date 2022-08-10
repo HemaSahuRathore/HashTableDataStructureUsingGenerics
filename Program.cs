@@ -11,8 +11,9 @@
             do
             {
                 Console.WriteLine("\nPlease select from below use case to execute");
-                Console.WriteLine("1.Find frequency of words in a sentence like “To be or not to be");
-                Console.Write("2.Exit   ");
+                Console.WriteLine("1.Find frequency of words in a sentence like 'To be or not to be' ");
+                Console.WriteLine("2.Frequency of words in a large paragraph phrase 'Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations'");
+                Console.Write("3.Exit   ");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -21,10 +22,14 @@
                         string paragraph = "To be or not to be";
                         MyMapNode<string, int>.CountNumOfOccurence(paragraph);
                         break;
+                    case 2:
+                        string phrase = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                        MyMapNode<string, int>.CountNumOfOccurence(phrase);
+                        break;
 
                 }
 
-            } while (option != 2);
+            } while (option != 3);
         }
     }
 }
