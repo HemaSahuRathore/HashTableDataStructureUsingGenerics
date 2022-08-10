@@ -8,7 +8,7 @@ namespace HashTableNBinaryTree
 {
     internal class MyMapNode<K, V>
     {
-        public struct KeyValue<k, v> 
+        public struct KeyValue<k, v>
         {
             public k Key { get; set; }
             public v Value { get; set; }
@@ -24,26 +24,9 @@ namespace HashTableNBinaryTree
             this.items = new LinkedList<KeyValue<K, V>>[size];
         }
 
-        //Method to find the frequency
-        public static void CountNumOfOccurence(string phrase)
-        {
-            MyMapNode<string, int> hashTable = new MyMapNode<string, int>(6);
-
-            string[] words = phrase.Split(' ');
-
-            foreach (string word in words)
-            {
-                if (hashTable.Exists(word.ToLower()))
-                    hashTable.Add(word.ToLower(), hashTable.GetValue(word.ToLower()) + 1);
-                else
-                    hashTable.Add(word.ToLower(), 1);
-            }
-            Console.WriteLine("Frequency of words in given phrase : ");
-            hashTable.Display();
-        }
 
         //check if word in paragraph already exists
-        public bool Exists(K key) 
+        public bool Exists(K key)
         {
             var linkedList = GetArrayPositionNLinkedList(key);
             foreach (KeyValue<K, V> item in linkedList)
@@ -153,7 +136,7 @@ namespace HashTableNBinaryTree
                     }
             }
 
-        } 
+        }
 
     }
 
